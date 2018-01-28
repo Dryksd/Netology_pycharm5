@@ -3,14 +3,14 @@ class non_human():
 
 class animals(non_human):
     legs = 4
-    def power(meal):
+    def power(self, meal):
         strong = 0
         if meal > 0:
             strong == meal*2
 
 class bird (non_human):
     legs = 2
-    def power (meal):
+    def power (self, meal):
         strong = 0
         if meal > 0:
             strong == meal*1.5
