@@ -1,25 +1,52 @@
-class non_human():
+class NonHuman:
     brain = 2
+    tail = 1
+    head = 1
 
-class animals(non_human):
+
+class Animals(NonHuman):
     legs = 4
+
     def power(self, meal):
-        strong = 0
+        self.meal = meal
         if meal > 0:
-            strong == meal*2
+            self.strong = meal*2
+            return self.strong
 
-class bird (non_human):
-    legs = 2
-    def power (self, meal):
-        strong = 0
+
+class Bird(NonHuman):
+    def __init__(self):
+        self.legs = 2
+
+    def power(self, meal):
         if meal > 0:
-            strong == meal*1.5
+            self.strong = meal*1.5
+            return self.strong
 
-cows = animals()
-goats = animals()
-sheep = animals()
-pigs = animals()
 
-chickens = bird()
-gooses = bird()
-ducks = bird()
+class Cows(Animals):
+    mass = 10
+
+
+class Goats(Animals):
+    mass = 5
+
+
+class Sheep(Animals):
+    mass = 5
+
+
+class Pigs(Animals):
+    mass = 6
+
+
+class Chickens(Bird):
+    mass = 2
+
+
+class Gooses(Bird):
+    mass = 2
+
+
+class Ducks(Bird):
+    mass = 1
